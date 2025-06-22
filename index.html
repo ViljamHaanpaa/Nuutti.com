@@ -3,57 +3,159 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Restaurointipuusepät Nuutti</title>
-    <link rel="stylesheet" href="style.css" />
+    <title>Nuutti | Etusivu</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: sans-serif;
+        background-color: #ffffff;
+        color: #000000;
+      }
+      header {
+        background: url("header-image.jpg") center/cover no-repeat;
+        color: white;
+        padding: 120px 20px 80px;
+        text-align: center;
+        position: relative;
+      }
+      header h1 {
+        font-size: 2.5rem;
+      }
+      header p {
+        margin-top: 10px;
+        font-size: 1rem;
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .nav {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+      }
+      .nav a {
+        color: white;
+        margin-left: 20px;
+        text-decoration: none;
+        font-weight: bold;
+      }
+      .section {
+        padding: 60px 20px;
+        max-width: 1000px;
+        margin: auto;
+      }
+      .stats {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        font-size: 1.2rem;
+        color: #1a50d9;
+        margin-bottom: 40px;
+      }
+      .services-box {
+        background-color: #1a50d9;
+        color: white;
+        border-radius: 40px;
+        padding: 30px;
+        max-width: 400px;
+      }
+      .projects-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        gap: 20px;
+        margin: 40px 0;
+      }
+      .projects-grid img {
+        width: 100%;
+        border-radius: 20px;
+      }
+      footer {
+        background-color: #1a50d9;
+        color: white;
+        padding: 40px 20px;
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+      }
+      footer div {
+        margin: 10px 20px;
+      }
+      .cta-button {
+        display: inline-block;
+        padding: 12px 24px;
+        background-color: #1a50d9;
+        color: white;
+        border-radius: 20px;
+        text-decoration: none;
+        margin-top: 20px;
+      }
+    </style>
   </head>
   <body>
     <header>
-      <h1>Nuutti – Ammattilaisia restaurointiin</h1>
-      <nav>
-        <a href="#meista">Tietoa meistä</a>
-        <a href="#projektit">Projektimme</a>
-        <a href="#yhteys">Ota yhteyttä</a>
-      </nav>
+      <div class="nav">
+        <a href="#">Etusivu</a>
+        <a href="#">Tietoa meistä</a>
+        <a href="#">Tutustu projekteihimme</a>
+        <a class="cta-button" href="#">Ota yhteyttä</a>
+      </div>
+      <h1>Nuutti</h1>
+      <p>Ammattilaisia restaurointiin</p>
+      <p>
+        Nuutti on kirkkoarkkitehtuurin erikoistunut restaurointipuusepänliike...
+      </p>
+      <a class="cta-button" href="#projektit">Tutustu projekteihimme</a>
     </header>
-    <main>
-      <section id="meista">
-        <h2>Keitä me olemme</h2>
-        <p>
-          Olemme toimineet vuodesta 2002 ja palvelemme ympäri Suomea. Kehitämme
-          jatkuvasti henkilöstömme osaamista.
-        </p>
-      </section>
-      <section id="projektit">
-        <h2>Tutustu töihimme</h2>
-        <p>
-          Tässä otoksia matkan varrelta – entisöimiämme ja kunnostamiamme
-          kohteita ympäri Suomen.
-        </p>
-        <div class="grid">
-          <img src="project1.jpg" alt="Kohde 1" />
-          <img src="project2.jpg" alt="Kohde 2" />
-          <img src="project3.jpg" alt="Kohde 3" />
-        </div>
-      </section>
-      <section id="yhteys">
-        <h2>Ota yhteyttä</h2>
-        <form name="contact" method="POST" data-netlify="true">
-          <input type="text" name="nimi" placeholder="Nimi" required />
-          <input
-            type="email"
-            name="sähköposti"
-            placeholder="Sähköpostiosoite"
-            required
-          />
-          <input type="text" name="puhelin" placeholder="Puhelinnumero" />
-          <textarea name="viesti" placeholder="Viesti"></textarea>
-          <button type="submit">Lähetä</button>
-        </form>
-      </section>
-    </main>
+
+    <section class="section">
+      <div class="stats">
+        <div>100+ Projektia</div>
+        <div>20+ Vuotta kokemusta</div>
+        <div>19+ Vakitusta Nuuttilaista</div>
+      </div>
+      <div class="services-box">
+        <strong>Palveluihimme kuuluvat mm.:</strong>
+        <ul>
+          <li>Ikkunoiden ja ovien restaurointi</li>
+          <li>Vanhojen rakennusten restaurointityöt</li>
+          <li>Paanukatot ja korjaustyöt</li>
+          <li>Hirsityöt</li>
+          <li>Maalaustyöt ja tapetointi</li>
+        </ul>
+      </div>
+
+      <div class="projects-grid">
+        <img src="proj1.jpg" alt="Kuva 1" />
+        <img src="proj2.jpg" alt="Kuva 2" />
+        <img src="proj3.jpg" alt="Kuva 3" />
+        <img src="proj4.jpg" alt="Kuva 4" />
+        <img src="proj5.jpg" alt="Kuva 5" />
+      </div>
+      <a class="cta-button" href="#">Katso lisää referenssejä</a>
+    </section>
+
     <footer>
-      <p>Restaurointipuusepät Nuutti Oy | Koskelantie 4, 90440 Kempele</p>
-      <p>Avoinna ma–pe 8.00–16.00 | info@nuutti.net</p>
+      <div>
+        <strong>Osoite</strong><br />
+        Restaurointipuusepät Nuutti Ay<br />
+        Koskelantie 4<br />
+        90440 KEMPELE
+      </div>
+      <div>
+        <strong>Avoinna</strong><br />
+        ma–pe<br />
+        8.00–16.00
+      </div>
+      <div>
+        <strong>Yhteystiedot</strong><br />
+        Kimmo Hammar 044 379 0582<br />
+        Timo Hammar 050 381 2058<br />
+        info@nuutti.net
+      </div>
     </footer>
   </body>
 </html>
