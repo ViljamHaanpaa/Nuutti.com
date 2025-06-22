@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="fi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Restaurointipuusepät Nuutti</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Nuutti – Ammattilaisia restaurointiin</h1>
+      <nav>
+        <a href="#meista">Tietoa meistä</a>
+        <a href="#projektit">Projektimme</a>
+        <a href="#yhteys">Ota yhteyttä</a>
+      </nav>
+    </header>
+    <main>
+      <section id="meista">
+        <h2>Keitä me olemme</h2>
+        <p>
+          Olemme toimineet vuodesta 2002 ja palvelemme ympäri Suomea. Kehitämme
+          jatkuvasti henkilöstömme osaamista.
+        </p>
+      </section>
+      <section id="projektit">
+        <h2>Tutustu töihimme</h2>
+        <p>
+          Tässä otoksia matkan varrelta – entisöimiämme ja kunnostamiamme
+          kohteita ympäri Suomen.
+        </p>
+        <div class="grid">
+          <img src="project1.jpg" alt="Kohde 1" />
+          <img src="project2.jpg" alt="Kohde 2" />
+          <img src="project3.jpg" alt="Kohde 3" />
+        </div>
+      </section>
+      <section id="yhteys">
+        <h2>Ota yhteyttä</h2>
+        <form name="contact" method="POST" data-netlify="true">
+          <input type="text" name="nimi" placeholder="Nimi" required />
+          <input
+            type="email"
+            name="sähköposti"
+            placeholder="Sähköpostiosoite"
+            required
+          />
+          <input type="text" name="puhelin" placeholder="Puhelinnumero" />
+          <textarea name="viesti" placeholder="Viesti"></textarea>
+          <button type="submit">Lähetä</button>
+        </form>
+      </section>
+    </main>
+    <footer>
+      <p>Restaurointipuusepät Nuutti Oy | Koskelantie 4, 90440 Kempele</p>
+      <p>Avoinna ma–pe 8.00–16.00 | info@nuutti.net</p>
+    </footer>
+  </body>
+</html>
